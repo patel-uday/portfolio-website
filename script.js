@@ -1,0 +1,10 @@
+'use strict';
+const menuButton=document.querySelector('.menu-button');
+const mobileNav=document.querySelector('.mobile-nav');
+menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileNav.hidden=open;});
+mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const chess=document.querySelector('.chess-grid');
+if(chess){const layout=['r...k..r','pp..pppp','..n..n..','...p....','...P.P..','..N..N..','PPP...PP','R...K..R'];const pieces={r:'♜',p:'♟',n:'♞',k:'♚',R:'♖',P:'♙',N:'♘',K:'♔'};layout.forEach((row,r)=>[...row].forEach((piece,c)=>{const cell=document.createElement('span');cell.className=(r+c)%2?'dark':'light';cell.textContent=pieces[piece]||'';chess.appendChild(cell);}));}
+const canvas=document.getElementById('field');
+if(canvas){const ctx=canvas.getContext('2d');let particles=[];let width=0,height=0,raf;const reset=()=>{const scale=Math.min(devicePixelRatio||1,2);width=canvas.clientWidth;height=canvas.clientHeight;canvas.width=width*scale;canvas.height=height*scale;ctx.setTransform(scale,0,0,scale,0,0);particles=Array.from({length:Math.min(850,Math.floor(width*height/500))},()=>({x:Math.random()*width,y:Math.random()*height,age:Math.random()*120}));};const draw=()=>{ctx.fillStyle='rgba(20,20,18,.075)';ctx.fillRect(0,0,width,height);ctx.strokeStyle='rgba(216,255,67,.52)';ctx.lineWidth=.7;for(const p of particles){const dx=p.x-width/2,dy=p.y-height/2;const angle=Math.atan2(dy,dx)+Math.PI/2+Math.sin(Math.hypot(dx,dy)*.013)*.32;const ox=p.x,oy=p.y;p.x+=Math.cos(angle)*1.25;p.y+=Math.sin(angle)*1.25;p.age++;ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(p.x,p.y);ctx.stroke();if(p.x<0||p.x>width||p.y<0||p.y>height||p.age>170){p.x=Math.random()*width;p.y=Math.random()*height;p.age=0;}}raf=requestAnimationFrame(draw);};new ResizeObserver(()=>{cancelAnimationFrame(raf);reset();draw();}).observe(canvas);}
