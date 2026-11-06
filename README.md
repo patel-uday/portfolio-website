@@ -1,17 +1,35 @@
-# Uday Patel Portfolio
+# Uday Patel — Portfolio
 
-A responsive, monochrome editorial portfolio built with plain HTML, CSS, and JavaScript. No build step is required.
+Personal portfolio of **Uday Patel**, a software engineer working across applied AI, industrial automation, immersive technology, and dependable technical systems.
 
-## Preview
+## Live website
 
-Serve this directory with any static file server, then open the local URL in a browser. For example, with Node installed:
+**[pateluday.com](https://pateluday.com)**
 
-```bash
-npx serve .
-```
+## About the site
 
-## Deploy
+The portfolio presents selected software projects, professional experience, technical interests, and contact information through a monochrome editorial design inspired by archival engineering documents, technical diagrams, and distressed printmaking.
 
-The site is ready for static deployment on Vercel. Import the directory as a project, use the **Other** framework preset, and leave the build command empty.
+Featured work includes:
 
-Replace `assets/Uday_Patel_Resume.pdf` whenever the resume changes.
+- **VectorEngine** — an interactive vector-field simulation engine
+- **Chess Engine** — an exploration of legal move generation, evaluation, and alpha-beta search
+- Technical leadership and applied AI work at **Dreamscape Learn, Arizona State University**
+- Industrial automation and production-system development at **Micro Laser**
+
+## Built with
+
+- Semantic HTML
+- Modern responsive CSS
+- Vanilla JavaScript and Canvas
+- Vercel deployment and custom-domain hosting
+
+## Links
+
+- [GitHub](https://github.com/patel-uday)
+- [LinkedIn](https://linkedin.com/in/udaypatel134)
+- [Portfolio](https://pateluday.com)
+
+---
+
+© Uday Patel. All rights reserved.
