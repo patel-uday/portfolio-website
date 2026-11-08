@@ -63,14 +63,23 @@
       <div class="project-list">
         <article class="project">
           <a class="project-art tallie-art" href="https://huggingface.co/pateluday/tallie" target="_blank" rel="noopener" aria-label="View the Tallie model on Hugging Face">
-            <div class="tallie-simple" aria-hidden="true">
-              <div class="comment-stream mono"><span>COMMENTS</span><i></i><i></i><i></i><i></i></div>
-              <div class="model-flow flow-in">→</div>
-              <div class="model-core mono"><span>TRAINED MODEL</span><strong>TALLIE</strong><b>1.33B</b><small>20 LAYERS</small><div class="core-scan"></div></div>
-              <div class="model-flow flow-out">→</div>
-              <div class="rank-stack mono"><span>RANKED</span><div><b>01</b><i></i></div><div><b>02</b><i></i></div><div><b>03</b><i></i></div></div>
+            <div class="neural-mark" aria-hidden="true">
+              <svg viewBox="0 0 520 330" role="presentation">
+                <g class="neural-lines">
+                  <path d="M55 82 176 52 264 112 352 52 465 82M55 82 176 136 264 112 352 136 465 82M55 165 176 52 264 112 352 220 465 165M55 165 176 136 264 218 352 136 465 165M55 248 176 220 264 218 352 220 465 248M55 248 176 304 264 218 352 304 465 248"/>
+                  <path d="M55 82 176 220M55 165 176 304M55 248 176 136M176 52 264 218M176 136 264 112M176 220 264 112M176 304 264 218M264 112 352 304M264 218 352 52M352 52 465 165M352 136 465 248M352 220 465 82M352 304 465 165"/>
+                </g>
+                <g class="neural-nodes">
+                  <circle cx="55" cy="82" r="7"/><circle cx="55" cy="165" r="7"/><circle cx="55" cy="248" r="7"/>
+                  <circle cx="176" cy="52" r="7"/><circle cx="176" cy="136" r="7"/><circle cx="176" cy="220" r="7"/><circle cx="176" cy="304" r="7"/>
+                  <circle class="neural-core" cx="264" cy="112" r="12"/><circle class="neural-core" cx="264" cy="218" r="12"/>
+                  <circle cx="352" cy="52" r="7"/><circle cx="352" cy="136" r="7"/><circle cx="352" cy="220" r="7"/><circle cx="352" cy="304" r="7"/>
+                  <circle cx="465" cy="82" r="7"/><circle cx="465" cy="165" r="7"/><circle cx="465" cy="248" r="7"/>
+                </g>
+              </svg>
+              <div class="model-stamp mono"><strong>T</strong><span>TALLIE / 1.33B</span></div>
             </div>
-            <div class="art-hud mono"><span>TEXT → MODEL → TALLY</span><span>001</span></div>
+            <div class="art-hud mono"><span>NEURAL MODEL / TRAINED</span><span>001</span></div>
           </a>
           <div class="project-copy"><div class="project-kicker mono"><span>001 / MACHINE LEARNING</span><span>PYTORCH — TRANSFORMERS — LORA</span></div><h3>TALLIE<br>1.0</h3><p>A 1.33B-parameter, non-generative extraction model that reads large comment collections, identifies named items, classifies their type and sentiment, and turns grounded mentions into ranked answers—processing 130 comments per second on one NVIDIA L4.</p><div class="model-metrics mono"><span><b>0.86</b>NAMES F1</span><span><b>0.91</b>TYPE ACC.</span><span><b>130/S</b>COMMENTS</span></div><a href="https://huggingface.co/pateluday/tallie" target="_blank" rel="noopener">EXPLORE MODEL <span>↗</span></a></div>
         </article>
