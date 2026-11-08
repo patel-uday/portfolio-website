@@ -11,3 +11,6 @@
 @keyframes node-pulse{0%,100%{opacity:.45}50%{opacity:1}}
 @media(max-width:500px){.neural-mark{width:90%}.model-metrics b{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.neural-lines,.neural-nodes circle{animation:none!important}}
+
+/* Keep every selected-project panel on the same visual rhythm. */
+@media(min-width:801px){.project{height:560px;min-height:0}.project-art{height:100%;min-height:0}.project-copy{height:100%;min-height:0}}
