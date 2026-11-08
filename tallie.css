@@ -1,16 +1,13 @@
 .tallie-art{display:grid;place-items:center;background:#131311}
-.tallie-art:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#d8ff430d 0,transparent 58%);pointer-events:none}
+.tallie-art:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#d8ff4309 0,transparent 58%);pointer-events:none}
 .neural-mark{position:relative;width:min(84%,650px)}
-.neural-mark svg{position:relative;z-index:2;display:block;width:100%;overflow:visible}
-.ai-watermark{position:absolute;z-index:1;inset:50% auto auto 50%;transform:translate(-50%,-50%);color:#fff;font-size:clamp(150px,20vw,260px);font-weight:500;line-height:1;letter-spacing:-.13em;opacity:.025}
-.ai-badge{position:absolute;z-index:3;left:50%;top:-28px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;color:#c5c2ba;font-size:8px;letter-spacing:1.5px;white-space:nowrap}
-.ai-badge i{width:6px;height:6px;border-radius:50%;background:var(--acid);box-shadow:0 0 12px #d8ff4388}
-.neural-lines{fill:none;stroke:#85827a;stroke-width:.8;opacity:.27;stroke-dasharray:2 5;animation:network-drift 14s linear infinite}
+.neural-mark svg{display:block;width:100%;overflow:visible}
+.neural-lines{fill:none;stroke-linecap:round}.neural-lines.secondary{stroke:#aaa79e;stroke-width:.65;opacity:.25}.neural-lines.primary{stroke:var(--acid);stroke-width:1.6;opacity:.7;stroke-dasharray:5 8;animation:network-drift 9s linear infinite}
 .neural-nodes circle{fill:#171715;stroke:#d3d0c7;stroke-width:1.5;animation:node-pulse 3.6s ease-in-out infinite}
 .neural-nodes circle:nth-child(3n+1){animation-delay:-1.2s}.neural-nodes circle:nth-child(3n+2){animation-delay:-2.4s}
 .neural-nodes .neural-core{fill:var(--acid);stroke:var(--acid);filter:drop-shadow(0 0 8px #d8ff4366)}
 .model-metrics{display:grid;grid-template-columns:repeat(3,1fr);margin:17px 0 5px;border-block:1px solid var(--line)}.model-metrics span{padding:12px 8px 10px;border-right:1px solid var(--line);color:#77746d;font-size:7px;letter-spacing:.5px}.model-metrics span:last-child{border:0}.model-metrics b{display:block;margin-bottom:5px;color:var(--white);font-size:13px;font-weight:400}
 @keyframes network-drift{to{stroke-dashoffset:-70}}
 @keyframes node-pulse{0%,100%{opacity:.45}50%{opacity:1}}
-@media(max-width:500px){.neural-mark{width:90%}.ai-badge{top:-18px;font-size:7px}.model-metrics b{font-size:11px}}
+@media(max-width:500px){.neural-mark{width:90%}.model-metrics b{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.neural-lines,.neural-nodes circle{animation:none!important}}
