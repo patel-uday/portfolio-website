@@ -63,15 +63,16 @@
       <div class="project-list">
         <article class="project">
           <a class="project-art tallie-art" href="https://huggingface.co/pateluday/tallie" target="_blank" rel="noopener" aria-label="View the Tallie model on Hugging Face">
-            <div class="tallie-grid" aria-hidden="true">
-              <div class="tallie-input mono"><span>24,000 COMMENTS</span><p>“Radiolab is fantastic.”</p><p>“I loved Dune but Snow Crash bored me.”</p><p>“Darknet Diaries is worth a listen.”</p></div>
-              <div class="tallie-process mono"><span>READ</span><i>→</i><span>EXTRACT</span><i>→</i><span>TALLY</span></div>
-              <div class="tallie-output mono"><div><b>01</b><span>PLANET MONEY</span><em>16</em></div><div><b>02</b><span>RADIOLAB</span><em>13</em></div><div><b>03</b><span>ECONTALK</span><em>13</em></div><div><b>04</b><span>DARKNET DIARIES</span><em>12</em></div></div>
-              <div class="tallie-node node-a"></div><div class="tallie-node node-b"></div><div class="tallie-node node-c"></div>
+            <div class="tallie-simple" aria-hidden="true">
+              <div class="comment-stream mono"><span>COMMENTS</span><i></i><i></i><i></i><i></i></div>
+              <div class="model-flow flow-in">→</div>
+              <div class="model-core mono"><span>TRAINED MODEL</span><strong>TALLIE</strong><b>1.33B</b><small>20 LAYERS</small><div class="core-scan"></div></div>
+              <div class="model-flow flow-out">→</div>
+              <div class="rank-stack mono"><span>RANKED</span><div><b>01</b><i></i></div><div><b>02</b><i></i></div><div><b>03</b><i></i></div></div>
             </div>
-            <div class="art-hud mono"><span>ITEM / TYPE / OPINION</span><span>001</span></div>
+            <div class="art-hud mono"><span>TEXT → MODEL → TALLY</span><span>001</span></div>
           </a>
-          <div class="project-copy"><div class="project-kicker mono"><span>001 / MACHINE LEARNING</span><span>PYTORCH — TRANSFORMERS — LORA</span></div><h3>TALLIE<br>1.0</h3><p>A 1.33B-parameter, non-generative extraction model that reads large comment collections, identifies named items, classifies their type and sentiment, and turns grounded mentions into ranked answers—processing 130 comments per second on one NVIDIA L4.</p><div class="model-metrics mono"><span><b>0.86</b>NAMES F1</span><span><b>0.91</b>TYPE ACC.</span><span><b>130/S</b>COMMENTS</span></div><a href="https://huggingface.co/pateluday/tallie" target="_blank" rel="noopener">VIEW MODEL CARD <span>↗</span></a></div>
+          <div class="project-copy"><div class="project-kicker mono"><span>001 / MACHINE LEARNING</span><span>PYTORCH — TRANSFORMERS — LORA</span></div><h3>TALLIE<br>1.0</h3><p>A 1.33B-parameter, non-generative extraction model that reads large comment collections, identifies named items, classifies their type and sentiment, and turns grounded mentions into ranked answers—processing 130 comments per second on one NVIDIA L4.</p><div class="model-metrics mono"><span><b>0.86</b>NAMES F1</span><span><b>0.91</b>TYPE ACC.</span><span><b>130/S</b>COMMENTS</span></div><a href="https://huggingface.co/pateluday/tallie" target="_blank" rel="noopener">EXPLORE MODEL <span>↗</span></a></div>
         </article>
         <article class="project reverse">
           <a class="project-art vector-art" href="https://github.com/patel-uday/vector-engine" target="_blank" rel="noopener" aria-label="View VectorEngine on GitHub"><canvas id="field" aria-hidden="true"></canvas><div class="art-hud mono"><span>VECTOR FIELD / LIVE</span><span>002</span></div></a>
