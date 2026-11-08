@@ -12,6 +12,7 @@ The portfolio presents selected software projects, professional experience, tech
 
 Featured work includes:
 
+- **Tallie 1.0** — a non-generative information-extraction model that turns large comment collections into grounded, ranked answers
 - **VectorEngine** — an interactive vector-field simulation engine
 - **Chess Engine** — an exploration of legal move generation, evaluation, and alpha-beta search
 - Technical leadership and applied AI work at **Dreamscape Learn, Arizona State University**
