@@ -1,0 +1,18 @@
+.sewer-art{display:grid;place-items:center;background:#0d0f0d}
+.sewer-scene{position:absolute;inset:0;overflow:hidden;background:radial-gradient(circle at 50% 44%,#30342e 0,#171a16 25%,#0b0d0b 68%)}
+.sewer-scene:after{content:"";position:absolute;inset:0;z-index:8;background:repeating-linear-gradient(0deg,transparent 0 3px,#0005 4px);pointer-events:none}
+.sewer-grid{position:absolute;z-index:1;left:-20%;right:-20%;bottom:-15%;height:58%;background:repeating-linear-gradient(90deg,#b7b9ae26 0 1px,transparent 1px 10%),repeating-linear-gradient(0deg,#b7b9ae20 0 1px,transparent 1px 16%);transform:perspective(280px) rotateX(67deg);transform-origin:bottom}
+.tunnel-frame{position:absolute;z-index:2;left:50%;top:45%;display:block;aspect-ratio:1.45;transform:translate(-50%,-50%);clip-path:polygon(18% 0,82% 0,100% 28%,100% 72%,82% 100%,18% 100%,0 72%,0 28%);background:#bec1b84b;animation:sewer-breathe 4.8s ease-in-out infinite}
+.tunnel-frame:after{content:"";position:absolute;inset:2px;clip-path:inherit;background:#10130f}
+.frame-1{width:22%;opacity:.32}.frame-2{width:42%;opacity:.42;animation-delay:-1.2s}.frame-3{width:64%;opacity:.52;animation-delay:-2.4s}.frame-4{width:88%;opacity:.62;animation-delay:-3.6s}
+.sewer-worm{position:absolute;z-index:4;left:50%;top:48%;width:100px;height:150px;transform:translate(-50%,-50%);animation:worm-sway 2.2s ease-in-out infinite}
+.sewer-worm span{position:absolute;left:50%;width:32px;height:36px;border:1px solid #d7dacd;background:#242820;border-radius:50%;transform:translateX(-50%)}
+.sewer-worm span:nth-child(1){top:8px;width:40px;height:42px;background:#30352b}.sewer-worm span:nth-child(2){top:36px;left:45%}.sewer-worm span:nth-child(3){top:64px;left:55%;width:28px}.sewer-worm span:nth-child(4){top:88px;left:46%;width:24px}.sewer-worm span:nth-child(5){top:110px;left:53%;width:19px}
+.sewer-worm b:before,.sewer-worm b:after{content:"";position:absolute;z-index:2;top:22px;width:5px;height:5px;background:var(--acid);box-shadow:0 0 9px var(--acid)}.sewer-worm b:before{left:39px}.sewer-worm b:after{right:39px}
+.sewer-pistol{position:absolute;z-index:6;left:50%;bottom:-16px;width:80px;height:155px;transform:translateX(-50%);background:#c5c7be;clip-path:polygon(28% 0,72% 0,83% 42%,68% 48%,73% 100%,38% 100%,33% 48%,17% 42%);filter:drop-shadow(12px 10px 0 #0008)}
+.sewer-pistol:before{content:"";position:absolute;left:34%;top:0;width:32%;height:48%;background:#262923}.sewer-pistol i{position:absolute;left:43%;top:10%;width:14%;height:7%;background:var(--acid)}
+.sewer-hud{position:absolute;z-index:7;left:22px;right:22px;top:20px;display:flex;justify-content:space-between;color:#d3d5cc;font-size:8px;letter-spacing:1px}.sewer-hud span:last-child{color:var(--acid)}
+@keyframes sewer-breathe{0%,100%{filter:brightness(.75)}50%{filter:brightness(1.25)}}
+@keyframes worm-sway{0%,100%{transform:translate(-50%,-50%) rotate(-2deg)}50%{transform:translate(-50%,-52%) rotate(3deg)}}
+@media(max-width:500px){.sewer-worm{transform:translate(-50%,-50%) scale(.78)}.sewer-pistol{width:62px;height:120px}}
+@media(prefers-reduced-motion:reduce){.tunnel-frame,.sewer-worm{animation:none!important}}
